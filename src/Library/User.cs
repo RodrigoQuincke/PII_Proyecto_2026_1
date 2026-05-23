@@ -2,6 +2,8 @@ using System.Collections.Generic;
 
 namespace Proyecto2026
 {
+    // Expert: User es el experto en su propio historial y preferencias.
+    // SRP: User gestiona los datos del usuario.
     public class User : GenericUser
     {
         public UserPreferences Preferences { get; private set; }
