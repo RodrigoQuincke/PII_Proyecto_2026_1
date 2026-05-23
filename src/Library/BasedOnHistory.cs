@@ -4,17 +4,26 @@ using System.Linq;
 namespace Proyecto2026
 {
 
-    // Filtro que excluye del resultado los ítems que el usuario ya consumió.
-    // Expert: Esta clase es la experta para decidir que ítems excluir porque es quien  conoce que ítems ya consumio el usuario.
-    // SRP: Su única responsabilidad es filtrar por historial de consumo.
-    // Implementa IRecommendationFilter para poder combinarse con otros filtros.
+    // Estrategia que recomienda ítems con tags similares a los del historial del usuario.
+    // Si el usuario no tiene historial, retorna la lista completa sin filtrar.
 
-    public class BasedOnHistory : IRecommendationFilter
+    public class BasedOnHistory : IRecommendationStrategy
     {
-        //  Devuelve los ítems que no aparecen en el historial del usuario.
-        public List<IRecommendableItem> Apply(User user, List<IRecommendableItem> items)
+        public List<IContent> Recommend(User user, List<IContent> items)
         {
-            // FALTA ARMAR
+            if (user.History.Count == 0)
+                return items;
+
+            // Recolectar todos los tags de ítems consumidos.
+            var consumedTags = user.History
+                .Where(i => i.Type == InteractionType.Played)
+                .SelectMany(i => i.Item.Tags)
+                .ToHashSet();
+
+            // Recomendar ítems que compartan al menos un tag con el historial.
+            return items
+                .Where(i => i.Tags.Any(t => consumedTags.Contains(t)))
+                .ToList();
         }
     }
 }

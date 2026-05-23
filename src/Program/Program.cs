@@ -1,9 +1,10 @@
-﻿namespace Program;
-
-class Program
+﻿namespace Proyecto2026
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello, World!");
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, World!");
+        }
     }
 }

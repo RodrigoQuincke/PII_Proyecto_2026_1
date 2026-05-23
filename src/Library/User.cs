@@ -13,12 +13,12 @@ namespace Proyecto2026
         public User(string username, string email, string hashedPassword)
             : base(username, email, hashedPassword)
         {
-            // Como es nuevo, las preferencias y le historial empiezan vacías
+            // Como es nuevo, las preferencias y le historial empiezan vacías.
             Preferences = new UserPreferences();
             History = new List<Interaction>();
         }
 
-        // Constructor para usuarios que ya existen
+        // Constructor para usuarios que ya existen.
         public User(string username, string email, string hashedPassword,
                     UserPreferences preferences, List<Interaction> history)
             : base(username, email, hashedPassword)
@@ -27,9 +27,11 @@ namespace Proyecto2026
             History = history;
         }
 
+        // Registra que el usuario consumió un ítem.
         public void Consume(IContent item)
         {
-            //////////// NO SE, DESPUES LO HAGO 
+            var interaction = new Interaction(item, InteractionType.Played, DateTime.Now);
+            History.Add(interaction);
         }
     }
 }
