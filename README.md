@@ -1,4 +1,4 @@
-# PII_Proyecto_2026_1# PII_Proyecto_2026_1
+# PII_Proyecto_2026_1#
 
 ## Integrantes
 
