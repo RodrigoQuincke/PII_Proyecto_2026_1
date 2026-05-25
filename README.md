@@ -35,7 +35,7 @@ El Facade también nos generó complicaciones al principio. Entendíamos la idea
 
 ### Qué aprendimos
 
-El proyecto nos ayudó a seguir internalizando cómo se piensa en orientado a objetos. No tanto la sintaxis de C#, que ya la veníamos manejando, sino el proceso de diseño: cómo partir de un problema, identificar las clases, asignarles responsabilidades y hacer que colaboren sin acoplarse demasiado.
+El proyecto nos ayudó a seguir internalizando en como funciona la programación orientado a objetos. No tanto la sintaxis de C#, que ya la veníamos manejando, sino el proceso de diseño: cómo partir de un problema, identificar las clases, asignarles responsabilidades y hacer que colaboren sin acoplarse demasiado.
 
 
 ### Recursos que usamos
