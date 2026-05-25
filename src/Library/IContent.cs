@@ -10,5 +10,6 @@ namespace Proyecto2026
         List<string> Tags { get; set; } // Lista de etiquetas (sirven para las recomendaciones y preferencias).
         int Popularity { get; set; } // Puntaje o popularidad del contenido en la plataforma.
         DateTime Date { get; set; } // Fecha de lanzamiento o de publicación del contenido.
+        bool IsDeleted { get; } // Indica si el contenido ha sido eliminado o no.
     }
 }

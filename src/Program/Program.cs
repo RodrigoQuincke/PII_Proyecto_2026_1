@@ -1,4 +1,6 @@
-﻿namespace Proyecto2026
+﻿using System;
+
+namespace Proyecto2026
 {
     class Program
     {

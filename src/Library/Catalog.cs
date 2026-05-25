@@ -34,7 +34,7 @@ namespace Proyecto2026
         // Retorna solo los ítems disponibles (no eliminados).
         public List<IContent> GetAvailableItems()
         {
-            return items;
+            return items.Where(item => !item.IsDeleted).ToList();
         }
     }
 }
