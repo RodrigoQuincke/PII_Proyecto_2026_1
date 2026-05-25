@@ -31,7 +31,7 @@ El mayor desafío de esta entrega fue el modelado inicial de las clases. No era 
 
 Al principio teníamos la lógica bastante mezclada: nos costó ubicar y entender algunos métodos y como funcionaban algunas cosas. 
 
-El Facade también nos generó complicaciones al principio. Entendíamos la idea general, pero costó decidir exactamente qué tenía que mostrar y qué tenía que ocultar. Una vez que lo vimos funcionando en los tests fue más claro.
+El Facade también nos generó complicaciones al principio. Entendíamos la idea general, pero costó decidir exactamente qué tenía que mostrar y qué tenía que ocultar.
 
 ### Qué aprendimos
 
